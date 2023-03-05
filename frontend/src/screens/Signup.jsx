@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function Signup() {
   const [credentials, setcredentials] = useState({
@@ -9,6 +11,8 @@ function Signup() {
     password: "",
     geolocation: "",
   });
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +37,10 @@ function Signup() {
     if (!json.success) {
       alert("Enter Valid Credentials");
     }
+
+    if (json.success) {
+      navigate("/login");
+    }
   };
 
   const onChange = (e) => {
@@ -43,6 +51,9 @@ function Signup() {
   };
   return (
     <>
+      <Navbar></Navbar>
+      <br></br>
+      <br></br>
       <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -107,6 +118,7 @@ function Signup() {
           </Link>
         </form>
       </div>
+      <Footer></Footer>
     </>
   );
 }

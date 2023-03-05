@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Delete from "@material-ui/icons/Delete";
 import { useCart, useDispatchCart } from "../components/ContextReducer";
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatchCart();
+  const [cartinfo, setcartInfo] = useState("Your cart is empty");
+
   if (data.length === 0) {
     return (
       <div>
-        <div className="m-5 w-100 text-center fs-3">The Cart is Empty!</div>
+        <div className="m-5 w-100 text-center fs-3">{cartinfo}</div>
       </div>
     );
   }
@@ -20,21 +22,25 @@ export default function Cart() {
     let userEmail = localStorage.getItem("userEmail");
     console.log("userEmail", userEmail);
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("https://mealmate-backend.onrender.com/api/orderData", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        order_data: data,
-        email: userEmail,
-        order_date: new Date().toDateString(),
-      }),
-    });
+    let response = await fetch(
+      "https://mealmate-backend.onrender.com/api/orderData",
+      {
+        // credentials: 'include',
+        // Origin:"http://localhost:3000/login",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          order_data: data,
+          email: userEmail,
+          order_date: new Date().toDateString(),
+        }),
+      }
+    );
     console.log("JSON RESPONSE:::::", response.status);
     if (response.status === 200) {
+      setcartInfo("Your order has been placed successfully");
       dispatch({ type: "DROP" });
     }
   };

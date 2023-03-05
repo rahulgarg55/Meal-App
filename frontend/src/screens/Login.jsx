@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function Login() {
   let navigate = useNavigate();
@@ -47,6 +49,10 @@ function Login() {
   };
   return (
     <>
+      <Navbar></Navbar>
+
+      <br></br>
+      <br></br>
       <div className="container">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -82,11 +88,12 @@ function Login() {
           <button type="submit" className="m-3 btn btn-success">
             Submit
           </button>
-          <Link to="/Signup" className="m-3 btn btn-danger">
-            I am a user
+          <Link to="/createuser" className="m-3 btn btn-danger">
+            I am a new user
           </Link>
         </form>
       </div>
+      <Footer></Footer>
     </>
   );
 }

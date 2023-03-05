@@ -10,7 +10,7 @@ function Footer() {
             to="/"
             className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
           ></Link>
-          <span className="text-muted">© 2023 Eat247, Inc</span>
+          <span className="text-muted">© 2023 MealMate, Inc</span>
         </div>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex"></ul>
