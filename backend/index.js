@@ -25,6 +25,12 @@ app.get("/", (req, res) => {
   res.send("HEllo");
 });
 
+// Middleware
+app.use(express.json());
+app.use("/api", require("./Routes/CreateUser"));
+app.use("/api", require("./Routes/DisplayData"));
+app.use("/api", require("./Routes/OrderData"));
+
 app.listen(PORT, () => {
   console.log(`Example App running on PORT ${PORT}`);
 });
