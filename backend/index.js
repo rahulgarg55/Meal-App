@@ -1,6 +1,11 @@
 const express = require("express");
+const dotenv = require("dotenv");
 
 const app = express();
+
+dotenv.config({ path: "./config.env" });
+
+const mongoDB = require("./db");
 
 const PORT = 5000;
 
@@ -12,6 +17,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+mongoDB();
 
 app.get("/", (req, res) => {
   console.log("Hello");
