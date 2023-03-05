@@ -10,10 +10,7 @@ const mongoDB = require("./db");
 const PORT = 5000;
 
 app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://mealmate-backend.onrender.com"
-  );
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
