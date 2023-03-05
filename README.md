@@ -1,70 +1,119 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
+﻿
+<div align="center">
+<img src="https://i.ibb.co/mCp6sVZ/MealMate.jpg" alt="moja global logo" height ="auto" width="400" />
+<br>
+  <h1>MealMate 🍕</h1>
+  <p>
+Our food ordering website provides a user-friendly platform for customers to browse menus and order their favorite food items. Our website aims to make the food ordering process convenient, efficient, and hassle-free for all parties involved.
+  </p>
+</div>
 
-## Available Scripts
+<br>
+<br>
 
-In the project directory, you can run:
+## Deployed Link
+<b>You can  check the deployed website here 👉: </b> [MealMate](https://mealmateapp.onrender.com)
 
-### `npm start`
+<b>The backend for MealMate is hosted here 👉: </b> [MealMate-Backend](https://mealmate-backend.onrender.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies and Features
+<br>
 
-### `npm test`
+| Technology | Features |
+|------------|----------|
+| Node.js, Express.js    |  Backend of the application  |   
+|    MongoDB Atlas, Mongoose    | Database for the application
+| Bcrypt     |    Password Management      |   
+| JSON Web Token     |    Authorization and Authentication |  
+|   React.js      |  Frontend of the application |   
+| Render     |     Deployment     | 
+| Bootstrap, Material-UI  |   Frontend  |
+<br>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<table>
+  <tr>
+    <td>Home page of the website</td>
+    <td>Searching Functionality</td>
+  </tr>
+  <tr>
+     <td>
+<img src="https://i.ibb.co/8cLCQNt/screely-1678016804262.png" alt="screely-1678016804262" border="0"></td>
+    <td>
+   <img src="https://i.ibb.co/Lp8KNqz/screely-1678016349581.png" alt="screely-1677924845579" border="0">
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Checkout Page</td>
+    <td>Orders History</td>
+  </tr>
+  <tr>
+    <td>
+<img src="https://i.ibb.co/QNPNYqZ/screely-1678016883681.png" alt="screely-1678016883681" border="0"></td>
+<td><img src="https://i.ibb.co/vLhrmw7/screely-1678016975126.png" alt="screely-1678016975126" border="0"></td>
+  </tr>
+</table>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To setup the project on your local environment, follow the given steps:
 
-### `npm run eject`
+1. Fork the [Palaksharma23/MealMate](https://github.com/Palaksharma23/MealMate) repository.
+2. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  Replace the `<USERNAME>` with your GitHub username. 
+   
+### Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Move to the frontend directory
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  cd frontend
+```
 
-## Learn More
+Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start the server in development mode
 
-### Code Splitting
+```
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Go to `localhost:3000` to view the website.
+<br>
 
-### Analyzing the Bundle Size
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Move to the backend directory
 
-### Making a Progressive Web App
+```bash
+  cd backend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Install dependencies
 
-### Advanced Configuration
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To start the server in development mode
 
-### Deployment
+```
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Server will start at `PORT 5000`
+<br>
